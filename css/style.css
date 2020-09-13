@@ -1,0 +1,12 @@
+body {
+	font-family: Arial;
+}
+button {
+	font-size: 36px;
+}
+.number {
+	color: red;
+}
+.symbol {
+	color: #0000FF;
+}
