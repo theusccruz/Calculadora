@@ -28,10 +28,30 @@ function result() {
 	var result = rep.replace(/x/g, "*");	
 
 	tela.innerHTML = eval(result);
-			
+
+}
+
+function deleteAll() {
+
+	var campo = document.querySelector("input.campo");
+	var tela = document.getElementById('tela');
+
+	campo.value = "";
+	tela.innerHTML = "";
 
 
+}
 
+function dlt() {
+
+	var campo = document.querySelector("input.campo");
+	var tela = document.getElementById('tela');
+
+	tela.innerHTML = "";
+
+	campo.value = campo.value.slice(0, -1);
+
+	console.log(campo.value);
 
 
 }
