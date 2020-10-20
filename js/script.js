@@ -12,6 +12,18 @@ function calculo(x) {
 		campo.value = x;
 	}
 
+	var campo = document.querySelector("input.campo");
+	var tela = document.getElementById('tela');
+
+
+	var valor = campo.value;
+
+	var rep = valor.replace(/÷/g, "/");	
+
+	var result = rep.replace(/x/g, "*");	
+
+	tela.innerHTML = eval(result);
+
 
 }
 
