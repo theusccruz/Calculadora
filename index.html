@@ -3,20 +3,23 @@
 <head>
 	<title>Calculadora!</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<script type="text/javascript" src="js/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width: 1080px)">
 </head>
 <body>
 
 	<h1 class="titulo">Digite ae!</h1>
 	
-	<input type="text" name="area" class="campo"><button onclick="dlt()" class="">«</button>
+	<input type="text" name="area" class="campo" onclick="tecla();"> 
+	<button onclick="dlt();" class="dlt">«</button>
 	<br>
 	<label id="tela" class="tela"></label>
 	<br><br>	
 
 	<button onclick="calculo(0);" value="0" class="number">0</button>
-	<button onclick="deleteAll()" class="dlt">C</button>	
+	<button onclick="deleteAll()" class="dltall">c</button>	
 	<br>
 	<button onclick="calculo(1);" value="1" class="number">1</button> 
 	<button onclick="calculo(2);" value="2" class="number">2</button> 
