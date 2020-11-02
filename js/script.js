@@ -9,21 +9,6 @@ function calculo(x) {
 		a = campo.value.length;
 		b = a - 1;
 
-		/* ACHO QUE AINDA VOU USAR ISSO AQUI
-		switch (campo.value.slice(b, a)) {
-
-			case x:
-			campo.value = campo.value.slice(0, -1);
-			campo.value = campo.value + x;
-			break;
-
-
-
-
-			default:
-			campo.value = campo.value + x;
-		}*/
-
 
 		if (x == "1") {
 
@@ -57,11 +42,11 @@ function calculo(x) {
 
 			campo.value = campo.value + x;
 
-		}else if (x == "9") {
+		} else if (x == "9") {
 
 			campo.value = campo.value + x;
 
-		}else if (x == "0") {
+		} else if (x == "0") {
 
 			campo.value = campo.value + x;
 
@@ -95,11 +80,24 @@ function calculo(x) {
 			campo.value = campo.value + x;
 		}
 		
-	} else {
+	} else if (campo.value === "") {		
 
-		campo.value = x;
+		switch (x) {
+
+			case "x":
+			 	campo.value = "";			 	
+			break;
+
+			case "÷":
+				campo.value = "";
+			break;
+
+			default:
+				campo.value = x;
+
+		}		
 	}
-	
+		
 
 	var campo = document.querySelector("input.campo");
 	var tela = document.getElementById('tela');
@@ -163,7 +161,7 @@ function dlt() {
 
 
 	campo.value = campo.value.slice(0, -1);
-	console.log(campo.value);
+	
 
 
 	var valor = campo.value;
