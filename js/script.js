@@ -94,7 +94,6 @@ function calculo(x) {
 
 			campo.value = campo.value + x;
 		}
-
 		
 	} else {
 
@@ -105,17 +104,23 @@ function calculo(x) {
 	var campo = document.querySelector("input.campo");
 	var tela = document.getElementById('tela');
 
-
-	var valor = campo.value;
-
-	var rep = valor.replace(/÷/g, "/");	
-
-	var result = rep.replace(/x/g, "*");	
-
-	tela.innerHTML = eval(result);
 	
+	var valor = campo.value;
+	var rep = valor.replace(/÷/g, "/");	
+	var result = rep.replace(/x/g, "*");
+
+	if (eval(result) === undefined) {
+
+		tela.innerHTML =  "";
+
+	} else {
+
+		tela.innerHTML = eval(result);
+
+	}	
 
 }
+
 
 function result() {
 
@@ -124,14 +129,21 @@ function result() {
 
 
 	var valor = campo.value;
-
 	var rep = valor.replace(/÷/g, "/");	
+	var result = rep.replace(/x/g, "*");
 
-	var result = rep.replace(/x/g, "*");	
+	if (eval(result) === undefined) {
 
-	tela.innerHTML = eval(result);
+		tela.innerHTML =  "";
+
+	} else {
+
+		tela.innerHTML = eval(result);
+
+	}
 
 }
+
 
 function deleteAll() {
 
@@ -149,11 +161,23 @@ function dlt() {
 	var campo = document.querySelector("input.campo");
 	var tela = document.getElementById('tela');
 
-	tela.innerHTML = "";
 
 	campo.value = campo.value.slice(0, -1);
-
 	console.log(campo.value);
 
+
+	var valor = campo.value;
+	var rep = valor.replace(/÷/g, "/");	
+	var result = rep.replace(/x/g, "*");
+
+	if (eval(result) === undefined) {
+
+		tela.innerHTML =  "";
+
+	} else {
+
+		tela.innerHTML = eval(result);
+
+	}
 
 }
